@@ -12,7 +12,7 @@ class Group(models.Model):
 
     class Meta:
         verbose_name = 'группа'
-        verbose_name_plural = 'Группы'    
+        verbose_name_plural = 'Группы'
 
     def __str__(self) -> str:
         return f'{self.title}'
