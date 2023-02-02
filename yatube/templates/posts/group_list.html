@@ -8,7 +8,7 @@
   <div class="container py-5">
     <h1>{{ group.title }}</h1>
     <p>
-      Записи группы: {{ group.description }} <!-- здесь у меня описание группы поэтому считаю что linebreaks не нужно. Коммент удалю потом-->
+      Записи группы: {{ group.description|linebreaks }} <!-- Убедил. Удалю потом :)-->
     </p>
     {% for post in posts %}
       <article>

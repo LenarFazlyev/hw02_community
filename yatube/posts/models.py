@@ -5,12 +5,15 @@ User = get_user_model()
 
 
 class Group(models.Model):
-    title = models.CharField(max_length=200, verbose_name='Группа')
+    title = models.CharField(max_length=200)
+    # убрал, но тогда в http://127.0.0.1:8000/admin/posts/group/
+    #  в шапке таблицы будет TITLE
+    # коммент удалю потом.
     slug = models.SlugField(unique=True, verbose_name='Подсайт')
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
-        verbose_name = 'группа'
+        verbose_name = 'группу'
         verbose_name_plural = 'Группы'
 
     def __str__(self) -> str:
