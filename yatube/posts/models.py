@@ -6,9 +6,6 @@ User = get_user_model()
 
 class Group(models.Model):
     title = models.CharField(max_length=200)
-    # убрал, но тогда в http://127.0.0.1:8000/admin/posts/group/
-    #  в шапке таблицы будет TITLE
-    # коммент удалю потом.
     slug = models.SlugField(unique=True, verbose_name='Подсайт')
     description = models.TextField(verbose_name='Описание')
 
