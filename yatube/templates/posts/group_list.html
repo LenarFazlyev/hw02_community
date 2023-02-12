@@ -8,7 +8,7 @@
   <div class="container py-5">
     <h1>{{ group.title }}</h1>
     <p>
-      Записи группы: {{ group.description|linebreaks }} <!-- Убедил. Удалю потом :)-->
+      Записи группы: {{ group.description|linebreaks }}
     </p>
     {% for post in page_obj %}
       <article>
